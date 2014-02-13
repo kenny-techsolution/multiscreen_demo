@@ -10,9 +10,8 @@ socket.on('news', function(data) {
 });
 
 
-
 $(function() {
-    $( ".draggable" ).draggable({ 
+    $( ".draggable" ).draggable({
     	scroll: false,
     	create: function (event, ui ) {
     		//console.log(event);
