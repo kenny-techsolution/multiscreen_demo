@@ -1,13 +1,18 @@
 // web.js
-var express = require("express");
+
 var logfmt = require("logfmt");
+var express = require("express");
 var app = express();
+var port = 5000;
 
 app.use(logfmt.requestLogger());
 
-app.use('/', express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
+var io = require('socket.io').listen(app.listen(port));
 
-var port = Number(process.env.PORT || 5000);
-app.listen(port, function() {
-  console.log("Listening on " + port);
+io.sockets.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
 });
