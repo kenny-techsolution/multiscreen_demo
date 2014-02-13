@@ -9,3 +9,19 @@ socket.on('news', function(data) {
     });
 });
 
+
+
+$(function() {
+    $( ".draggable" ).draggable({ 
+    	scroll: false,
+    	create: function (event, ui ) {
+    		//console.log(event);
+    	},
+    	drag: function (event, ui) {
+    		var screenWidth = $("#container").width();
+    		if (ui.position.left > screenWidth - 140) {
+    			ui.helper.hide();
+    		}
+    	}
+    });
+});
