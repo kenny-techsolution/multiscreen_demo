@@ -44,12 +44,13 @@ $(function() {
     	}
 	}
 
-	var createTask = function (task) {
+	var createTask = function (task, left) {
 		if($("#" + task.id).length == 0) {
 			var $container = $(".container");
+			var leftOffset = left ? left : office.leftOffset();
 			$newTask = $("<div id='" + task.id + "' class='task draggable ui-widget-content'>" + task.description + "</div>");
 			$newTask.css("top", $container.height() * task.top + "px");
-			$newTask.css("left", office.leftOffset() + "px");
+			$newTask.css("left", leftOffset + "px");
 			$newTask.draggable(dragOptions);
 			$container.append($newTask);
 		}
@@ -71,7 +72,7 @@ $(function() {
         var task = {};
         task.id = uuid;
         task.description = description;
-        createTask(task);
+        createTask(task, 40);
          $('.modal-footer input.form-control').val('');
         $('.modal').modal('hide');
     });
