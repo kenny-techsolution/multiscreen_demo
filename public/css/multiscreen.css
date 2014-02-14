@@ -40,10 +40,16 @@ h1 {
 }
 
 #add-task {
-    position: fixed;
-    bottom: 30px;
-    left: 40px;
+	position: fixed;
+	bottom: 30px;
+	left: 40px;
+	background: url(images/plus.png) no-repeat;
+	height: 39px;
+	width: 39px;
+	border: none !important;
+	outline:none;
 }
+
 .modal-footer {
     margin-top: 0px!important;
 }
