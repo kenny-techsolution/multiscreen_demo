@@ -1,40 +1,82 @@
 <!doctype html>
 <!-- Dave was here! -->
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-  <title>430 Bush</title>
+        <title>430 Bush</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  <link rel="stylesheet" href="css/multiscreen.css?v=1.0">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
+<!--
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/multiscreen.css?v=1.0">
+-->
+ <link rel="stylesheet" href="css/multiscreen.css?v=1.0">
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script src="js/jquery.ui.touch-punch.min.js"></script>
 
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <script src="/socket.io/socket.io.js"></script>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="/socket.io/socket.io.js"></script>
 
-  <script src="js/multiscreen.js"></script>
+        <script src="js/multiscreen.js"></script>
 
-</head>
+    </head>
 
-<body>
-<h1>430 Bush</h1>
-  <div id="bush" class="container">
+    <body>
+        <h1>430 Bush</h1>
+        <div id="bush" class="container">
 
-	  <div id="hub" class="task draggable ui-widget-content">
-	  Make HUB fancy
-	  </div>
+            <div id="hub" class="task draggable ui-widget-content">
+                Make HUB fancy
+            </div>
 
-	  <div id="cip" class="task draggable ui-widget-content">
-	  Build CIP
-	  </div>
+            <div id="cip" class="task draggable ui-widget-content">
+                Build CIP
+            </div>
 
-  </div>
-</body>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button id="add-task" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Add Task
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div  id='task-modal' class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Name Your Task</h4>
+                    </div>
+                    <div class="modal-footer">
+
+                        <div class="col-lg-13">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button id="create-button" class="btn btn-default" type="button">
+                                        Create
+                                    </button> </span>
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    </body>
 </html>

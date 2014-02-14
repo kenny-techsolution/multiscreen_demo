@@ -23,3 +23,31 @@ h1 {
 	margin: 10px;
 	padding: 5px;
 }
+
+#add-task {
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+}
+.modal-footer {
+    margin-top: 0px!important;
+}
+
+.modal-header {
+    background-color: #3578B1;
+    color: white;
+}
+
+.modal-header .close {
+    color: white!important;
+    opacity: 1!important;
+}
+
+/*
+.modal-dialog {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+*/
