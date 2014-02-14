@@ -2,7 +2,7 @@ $(function() {
 	var offices = {
 		"paloAlto" : {
 			channel: "paloAlto",
-			emits: "paloAlto",
+			emits: "fromPaloAlto",
 			leftOffset: function () {
 				return 10;
 			},
@@ -12,7 +12,7 @@ $(function() {
 		},
 		"bush" : {
 			channel: "bush",
-			emits: "bush",
+			emits: "fromBush",
 			leftOffset: function () {
 				return $(".container").width() - 210;
 			},
