@@ -11,8 +11,16 @@ app.use(express.static(__dirname + '/public'));
 var io = require('socket.io').listen(app.listen(port));
 
 io.sockets.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
+  socket.on('room', function(room) {
+        socket.join(room);
   });
+
+  socket.on('paloAlto', function (data) {
+    socket.broadcast.to('screens').emit('bush', data)
+  });
+
+  socket.on('bush', function (data) {
+	  socket.broadcast.to('screens').emit('paloAlto', data);
+  });
+
 });
