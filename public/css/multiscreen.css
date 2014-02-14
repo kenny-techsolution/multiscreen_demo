@@ -158,7 +158,42 @@ border-radius: 5px;
 
 .page-header {
 	border-bottom: none !important;
-}"
+}
+
+
+.panel-title span {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px; 
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  float: right;
+}
+
+.ju {
+	 background-image: url("images/ju.jpg");
+}
+
+.kenny {
+	 background-image: url("images/kenny_icon.jpg");
+}
+
+.teck {
+	 background-image: url("images/teck.jpg");
+}
+
+.dave {
+	 background-image: url("images/dave.jpg");
+}
+
+
+
 /*
 .modal-dialog {
     margin: 0;
