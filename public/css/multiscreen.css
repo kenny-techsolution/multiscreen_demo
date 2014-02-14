@@ -26,6 +26,7 @@ h1 {
 	position: absolute !important;
 }
 
+.draggable-item:hover,
 .draggable:hover {
 	cursor: pointer;
 }
