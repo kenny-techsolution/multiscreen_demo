@@ -1,6 +1,6 @@
 $(function() {
 	var office = $(".container").attr("id");
-	var socket = io.connect('http://sleepy-cove-5722.herokuapp.com/');
+	var socket = io.connect('/');
    
 	var dragOptions = {
     	scroll: false,
