@@ -17,7 +17,7 @@ h1 {
 }
 
 .container {
-	position: absolute;
+	/*position: absolute;*/
 	width: 100%;
 	height: 100%;
 }
@@ -55,7 +55,7 @@ h1 {
 
 .developer {
     display: block;
-    width: 30%;
+    width: 300px;
     height: 90%;
     float: right;
     margin-right: 20px;
@@ -63,6 +63,61 @@ h1 {
 
 .panel-body {
     height: 300px;
+    padding: 0px;
+}
+.sortable {
+    height: 290px;
+    width: 100%;
+    margin:0;
+
+}
+.sortable div {
+    margin-left:2px;
+    margin-right:2px;
+    display :block;
+    width: auto;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #F2F2F2;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: bottom;
+    text-align: left;
+    padding-top: 13px;
+    padding-left: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+
+.draggable-item {
+        display :block;
+    padding-top: 13px;
+    padding-left: 30px;
+    width: 294px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #F2F2F2;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: bottom;
+    text-align: left;
+}
+.ui-state-default {
+    background-image:none;
+}
+.ui-state-hover {
+    background-image: none;
+    background-color:#FABBAC!important;
+}
+#bush.ui-state-hover {
+    background: none!important;
+    border: none;
+}
+.round-corner {
+        -webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
 }
 /*
 .modal-dialog {

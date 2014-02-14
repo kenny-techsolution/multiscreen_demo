@@ -19,7 +19,7 @@
   		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   		<script src="js/jquery.ui.touch-punch.min.js"></script>
-
+        <script src="js/multiscreen.js"></script>
 
 
         <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
         <![endif]-->
         <script src="/socket.io/socket.io.js"></script>
 
-        <script src="js/multiscreen.js"></script>
+
 
     </head>
 
@@ -38,14 +38,15 @@
         <div id="bush" class="container">
 
 
-        </div>
+
 
         <div class="developer panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Kenny Chung</h3>
             </div>
             <div class="panel-body">
-                Panel content
+                <div class="sortable">
+                </div>
             </div>
         </div>
 
@@ -54,10 +55,11 @@
                 <h3 class="panel-title">David Sun</h3>
             </div>
             <div class="panel-body">
-                Panel content
+                <div class="sortable">
+                </div>
             </div>
         </div>
-
+        </div>
         <!-- Button trigger modal -->
         <button id="add-task" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
             Add Task
