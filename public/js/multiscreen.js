@@ -7,7 +7,7 @@ $(function() {
 				return 10;
 			},
 			shouldSwitch: function (left) {
-				return  left < -140;
+				return  left < -50;
 			}
 		},
 		"bush" : {

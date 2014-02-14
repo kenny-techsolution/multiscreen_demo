@@ -22,6 +22,10 @@ h1 {
 	position: absolute !important;
 }
 
+.draggable:hover {
+	cursor: pointer;
+}
+
 .task {
 	border:1px solid #000;
 	width: 200px;
