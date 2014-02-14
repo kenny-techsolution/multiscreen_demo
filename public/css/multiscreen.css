@@ -4,6 +4,10 @@ body {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	display:block;
+	padding-top: 0px;
+	padding-left:24px;
+	padding-right: 24px;
+
 
 }
 
@@ -24,6 +28,7 @@ h1 {
 .task {
 	margin: 10px;
 	padding: 5px;
+	border: 1px solid black;
 }
 
 #add-task {
@@ -45,6 +50,17 @@ h1 {
     opacity: 1!important;
 }
 
+.developer {
+    display: block;
+    width: 30%;
+    height: 90%;
+    float: right;
+    margin-right: 20px;
+}
+
+.panel-body {
+    height: 300px;
+}
 /*
 .modal-dialog {
     margin: 0;

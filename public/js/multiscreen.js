@@ -7,6 +7,8 @@ $(function() {
     	create: function (event, ui ) {
     		//console.log(event);
     	},
+    	snap: ".panel-body",
+    	snapMode: "inner",
     	drag: function (event, ui) {
     		var screenWidth = $(".container").width();
     		var $task = ui.helper;
