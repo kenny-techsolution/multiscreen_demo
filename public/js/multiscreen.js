@@ -9,13 +9,17 @@ $(function() {
     	},
     	drag: function (event, ui) {
     		var screenWidth = $(".container").width();
-    		var $task = ui.helper;
-    		if ($task.is(":visible") && ui.position.left >  screenWidth - 140) {
+    		var $task = ui.helper; 
+    		var shouldSwitch = function () {
+    			return  ui.position.left >  screenWidth - 140 || ui.position.left < -140;
+    		} 
+    		
+    		if (shouldSwitch()) {
     			socket.emit(office, {
-    				"task": $task.attr("id"),
+    				"id": $task.attr("id"),
     				"description": $task.text().trim()
     			});
-    			$task.hide();
+    			$task.remove();
     		}
     	}
 	}
@@ -38,6 +42,7 @@ $(function() {
 	});
 	
 	socket.on('bush', function(data) { 
-	    console.log(data); 
+	    console.log(data);
+	    createTask(data);
 	});
 });
