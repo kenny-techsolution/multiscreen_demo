@@ -95,11 +95,11 @@ h1 {
 }
 
 .draggable-item {
-        display :block;
+    display :block;
     padding-top: 13px;
     padding-left: 30px;
-    width: 294px;
-    height: 50px;
+    width: 294px !important;
+    height: 50px !important;
     border: 1px solid #91918D;
     background-color: #F2F2F2;
     font-size: 20px;
@@ -123,6 +123,35 @@ h1 {
 -moz-border-radius: 5px;
 border-radius: 5px;
 }
+
+.attLogo {
+  width: 169px;
+  height: 66px;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  border-bottom: 1px solid #eee;
+  margin-right: 75px;
+}
+
+.officeLogo {
+  width: 546px;
+  height: 56px; 
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+#bush .officeLogo { 
+  background-image: url("images/sf_office_header.png"); 
+}
+
+#paloAlto .officeLogo { 
+  background-image: url("images/palo_alto_office_header.png");
+}
+
+.page-header {
+	border-bottom: none !important;
+}"
 /*
 .modal-dialog {
     margin: 0;
