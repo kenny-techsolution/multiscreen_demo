@@ -85,24 +85,4 @@ $(function() {
     function guid() {
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
     }
-
-	    $('#create-button').on('click', function() {
-        var description = $('.modal-footer input.form-control').val();
-        console.log(description);
-        var uuid = guid();
-        var task = {};
-        task.id = uuid;
-        task.description = description;
-        createTask(task);
-         $('.modal-footer input.form-control').val('');
-        $('.modal').modal('hide');
-    });
-
-    function s4() {
-        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-    };
-
-    function guid() {
-        return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-    }
 });
