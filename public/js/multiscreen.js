@@ -25,9 +25,11 @@ $(function() {
 	}
 
 	var createTask = function (task) {
-		$newTask = $("<div id='" + task.id + "' class='task draggable ui-widget-content'>" + task.description + "</div>");
-		$(".container").append($newTask);
-		$newTask.draggable(dragOptions);
+		if($("#" + task.id).length == 0) {
+			$newTask = $("<div id='" + task.id + "' class='task draggable ui-widget-content'>" + task.description + "</div>");
+			$(".container").append($newTask);
+			$newTask.draggable(dragOptions);
+		}
 	}
 
     $( ".draggable" ).draggable(dragOptions);
@@ -36,12 +38,7 @@ $(function() {
 		socket.emit('room', 'screens')
 	})
 
-	socket.on('paloAlto', function(data) {
-	    console.log(data);
-	    createTask(data);
-	});
-
-	socket.on('bush', function(data) {
+	socket.on(office, function(data) {
 	    console.log(data);
 	    createTask(data);
 	});
