@@ -34,7 +34,6 @@ $(function() {
     		var $task = ui.helper;
 
     		if (office.shouldSwitch(ui.position.left)) {
-    			console.log(ui.position.top/$(".container").height());
     			socket.emit(office.emits, {
     				"id": $task.attr("id"),
     				"description": $task.text().trim(), 
@@ -48,8 +47,6 @@ $(function() {
 	var createTask = function (task) {
 		if($("#" + task.id).length == 0) {
 			var $container = $(".container");
-			console.log($container.height() * task.top );
-			
 			$newTask = $("<div id='" + task.id + "' class='task draggable ui-widget-content'>" + task.description + "</div>");
 			$newTask.css("top", $container.height() * task.top + "px");
 			$newTask.css("left", office.leftOffset() + "px");
@@ -65,13 +62,11 @@ $(function() {
 	});
 
 	socket.on(office.channel, function(data) {
-	    console.log(data);
 	    createTask(data);
 	});
 
 	$('#create-button').on('click', function() {
         var description = $('.modal-footer input.form-control').val();
-        console.log(description);
         var uuid = guid();
         var task = {};
         task.id = uuid;
