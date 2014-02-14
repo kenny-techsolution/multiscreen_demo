@@ -26,6 +26,10 @@ h1 {
 	position: absolute !important;
 }
 
+.draggable:hover {
+	cursor: pointer;
+}
+
 .task {
 	border:1px solid #000;
 	width: 200px;
@@ -96,7 +100,7 @@ h1 {
     padding-left: 30px;
     width: 294px;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid #91918D;
     background-color: #F2F2F2;
     font-size: 20px;
     line-height: 20px;
@@ -115,9 +119,9 @@ h1 {
     border: none;
 }
 .round-corner {
-        -webkit-border-radius: 3px;
--moz-border-radius: 3px;
-border-radius: 3px;
+        -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
 }
 /*
 .modal-dialog {

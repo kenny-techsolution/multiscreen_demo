@@ -15,11 +15,11 @@ io.sockets.on('connection', function (socket) {
         socket.join(room);
   });
 
-  socket.on('paloAlto', function (data) {
+  socket.on('fromPaloAlto', function (data) {
     socket.broadcast.to('screens').emit('bush', data)
   });
 
-  socket.on('bush', function (data) {
+  socket.on('fromBush', function (data) {
 	  socket.broadcast.to('screens').emit('paloAlto', data);
   });
 
