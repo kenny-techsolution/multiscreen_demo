@@ -1,7 +1,7 @@
 $(function() {
 	var office = $(".container").attr("id");
-	var socket = io.connect('http://localhost:5000');
-	
+	var socket = io.connect('http://murmuring-caverns-8060.herokuapp.com/');
+    console.log(process.env);
 	var dragOptions = {
     	scroll: false,
     	create: function (event, ui ) {
@@ -19,25 +19,25 @@ $(function() {
     		}
     	}
 	}
-	
+
 	var createTask = function (task) {
 		$newTask = $("<div id='" + task.id + "' class='task draggable ui-widget-content'>" + task.description + "</div>");
 		$(".container").append($newTask);
 		$newTask.draggable(dragOptions);
 	}
-	
+
     $( ".draggable" ).draggable(dragOptions);
-	
+
 	socket.on('connect', function () {
 		socket.emit('room', 'screens')
 	})
-	
-	socket.on('paloAlto', function(data) { 
-	    console.log(data); 
+
+	socket.on('paloAlto', function(data) {
+	    console.log(data);
 	    createTask(data);
 	});
-	
-	socket.on('bush', function(data) { 
-	    console.log(data); 
+
+	socket.on('bush', function(data) {
+	    console.log(data);
 	});
 });
