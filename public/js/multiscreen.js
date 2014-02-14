@@ -1,7 +1,7 @@
 $(function() {
 	var office = $(".container").attr("id");
-	var socket = io.connect('http://murmuring-caverns-8060.herokuapp.com/');
-    console.log(process.env);
+	var socket = io.connect('http://sleepy-cove-5722.herokuapp.com/');
+   
 	var dragOptions = {
     	scroll: false,
     	create: function (event, ui ) {
