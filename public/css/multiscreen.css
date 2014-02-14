@@ -114,7 +114,7 @@ h1 {
     background-image: none;
     background-color:#FABBAC!important;
 }
-#bush.ui-state-hover {
+.container.ui-state-hover {
     background: none!important;
     border: none;
 }

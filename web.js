@@ -16,7 +16,8 @@ io.sockets.on('connection', function (socket) {
   });
 
   socket.on('fromPaloAlto', function (data) {
-    socket.broadcast.to('screens').emit('bush', data)
+    socket.broadcast.to('screens').emit('bush', data);
+    console.log(data);
   });
 
   socket.on('fromBush', function (data) {

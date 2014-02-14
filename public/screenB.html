@@ -1,30 +1,92 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-  <title>Palo Alto</title> 
+        <title>Palo Alto</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">  
-  <link rel="stylesheet" href="css/multiscreen.css?v=1.0">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="js/multiscreen.js"></script>
-</head>
+        <link rel="stylesheet" href="css/multiscreen.css?v=1.0">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/multiscreen.js"></script>
 
-<body>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
 
-  <h1>Palo Alto</h1>
-  <div id="paloAlto" class="container"> 
-  
-  </div>
-</body>
+    <body>
+        <div class="page-header">
+            <h1>Palo Alto</h1>
+        </div>
+        <div id="paloAlto" class="container">
+
+
+
+
+        <div class="developer panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Teck</h3>
+            </div>
+            <div class="panel-body">
+                <div class="sortable">
+                </div>
+            </div>
+        </div>
+
+        <div class="developer panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Ju</h3>
+            </div>
+            <div class="panel-body">
+                <div class="sortable">
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button id="add-task" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Add Task
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div  id='task-modal' class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Name Your Task</h4>
+                    </div>
+                    <div class="modal-footer">
+
+                        <div class="col-lg-13">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button id="create-button" class="btn btn-default" type="button">
+                                        Create
+                                    </button> </span>
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    </body>
 </html>

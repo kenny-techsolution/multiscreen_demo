@@ -34,7 +34,6 @@ $(function() {
         snapMode : "inner",
         drag : function(event, ui) {
             var $task = ui.helper;
-
             if (office.shouldSwitch(ui.position.left)) {
                 socket.emit(office.emits, {
                     "id" : $task.attr("id"),
@@ -44,7 +43,7 @@ $(function() {
                 $task.remove();
             }
         },
-        appendTo : "#bush"
+        appendTo : ".container"
     };
 
     var createTask = function(task, left) {
@@ -65,7 +64,9 @@ $(function() {
         socket.emit('room', 'screens');
     });
 
+    //console.log(office.channel);
     socket.on(office.channel, function(data) {
+        //console.log(data);
         createTask(data);
     });
 
@@ -95,43 +96,32 @@ $(function() {
         hoverClass : "ui-state-hover",
         accept : ".unassigned",
         drop : function(event, ui) {
-            console.log("dropdropdrop");
-            $(this).find(".placeholder").remove();
-            $("<div class='draggable-item round-corner assigned boxed'></div>").text(ui.draggable.text()).appendTo(this).draggable(dragOptions2);
+            //$(this).find(".placeholder").remove();
+            $("<div class='draggable-item round-corner assigned'></div>").text(ui.draggable.text()).appendTo(this).draggable(dragOptions2);
             $(ui.draggable).remove();
-            //$( "#sortable2 li").draggable(dragOptions);
-            //$( "#sortable2").sortable();
         }
     });
-
-    $("#bush").droppable({
-        activeClass : "ui-state-default",
-        hoverClass : "ui-state-hover",
-        accept : ".assigned",
-        drop : function(event, ui) {
-            console.log("ttttttt");
-            $("<div class='draggable-item round-corner unassigned'></div>").text(ui.draggable.text()).appendTo(this).draggable(dragOptions2);
-            $(ui.draggable).remove();
-            //$( "<div class='draggable-item round-corner'></div>" ).text( ui.draggable.text() ).appendTo( this ).draggable({ snap: false });
-            //$(ui.draggable).remove();
-            //$( "#sortable2 li").draggable(dragOptions);
-            //$( "#sortable2").sortable();
-        }
-    });
+    //$(".container").sortable().disableSelection();
+    // $(".container").droppable({
+        // activeClass : "ui-state-default",
+        // hoverClass : "ui-state-hover",
+        // accept : ".assigned",
+        // drop : function(event, ui) {
+            // $("<div class='draggable-item round-corner unassigned'></div>").text(ui.draggable.text()).appendTo(".container").draggable(dragOptions);
+            // $(ui.draggable).remove();
+        // }
+    // });
 
     var dragOptions2 = {
         scroll : false,
         create : function(event, ui) {
 
         },
-
         snap : false,
         drag : function(event, ui) {
             var $task = ui.helper;
-            console.log();
-            console.log(ui);
+
             ui.helper.removeClass("assigned").addClass("unassigned");
-            //console.log(event);
 
             if (office.shouldSwitch(ui.position.left)) {
                 socket.emit(office.emits, {
@@ -142,6 +132,5 @@ $(function() {
                 $task.remove();
             }
         }
-        //helper: "clone"
     };
 });
