@@ -22,7 +22,7 @@
   "homepage": "https://github.com/yoyocicada/multiscreen_demo",
   "dependencies": {
     "logfmt": "~0.20.0",
-    "express": "~3.4.8",
+    "express": "~4.17.1",
     "socket.io": "~0.9.16"
   },
   "engines": {
